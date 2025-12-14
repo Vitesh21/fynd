@@ -1,0 +1,23 @@
+name: Deploy User Dashboard to Vercel
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'user-dashboard/**'
+      - '.github/workflows/deploy-user-dashboard.yml'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Deploy to Vercel
+        run: |
+          npm install -g vercel
+          cd user-dashboard
+          vercel deploy --prod --token=${{ secrets.VERCEL_TOKEN }}
+        env:
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_USER_DASHBOARD_PROJECT_ID }}
