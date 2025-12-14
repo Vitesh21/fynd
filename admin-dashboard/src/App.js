@@ -10,7 +10,7 @@ function App() {
   const [error, setError] = useState('');
   const [autoRefresh, setAutoRefresh] = useState(true);
 
-  const API_BASE = process.env.REACT_APP_API_URL || 'http://localhost:5000';
+  const API_BASE = 'https://fynd-1-g3ui.onrender.com';
 
   useEffect(() => {
     fetchData();

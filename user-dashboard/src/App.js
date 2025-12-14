@@ -10,7 +10,7 @@ function App() {
   const [aiResponse, setAiResponse] = useState(null);
   const [error, setError] = useState('');
 
-  const API_BASE = process.env.REACT_APP_API_URL || 'http://localhost:5000';
+  const API_BASE = 'https://fynd-1-g3ui.onrender.com';
 
   const handleSubmit = async (e) => {
     e.preventDefault();
