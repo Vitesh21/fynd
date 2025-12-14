@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: ai-feedback-backend
+    env: python
+    pythonVersion: 3.11
+    buildCommand: pip install -r backend/requirements_prod.txt
+    startCommand: cd backend && gunicorn -w 4 -b 0.0.0.0:$PORT app_prod:app
+    plan: free
+    healthCheckPath: /api/health
+    envVars:
+      - key: GEMINI_API_KEY
+        scope: build,runtime
+        sync: false
