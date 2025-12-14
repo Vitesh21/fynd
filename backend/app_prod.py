@@ -10,7 +10,7 @@ app = Flask(__name__)
 CORS(app)
 
 # Configure Gemini API
-API_KEY = os.getenv("GEMINI_API_KEY", "AIzaSyAYH2lCC6PiM3cA5LAO5DecorahRhZPuYI")
+API_KEY = os.getenv("GEMINI_API_KEY", "AIzaSyDdzcGtzHwmoIKU1mtx_duy1gW7KBC6GQw")
 genai.configure(api_key=API_KEY)
 
 # Data file path
