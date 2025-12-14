@@ -61,15 +61,11 @@ Follow the detailed guide in `DEPLOY_TO_PRODUCTION.md`
 
 ---
 
-## Your Deployment Links (Add Your URLs Here)
+## Your Deployment Links
 
-Once deployed, save your links here:
-
-```
-Backend API:        https://______________________________
-User Dashboard:     https://______________________________
-Admin Dashboard:    https://______________________________
-```
+✅ **Backend API:**        https://fynd-1-g3ui.onrender.com
+📝 **User Dashboard:**     https://______________________________
+📊 **Admin Dashboard:**    https://______________________________
 
 ---
 
